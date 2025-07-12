@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.x/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/@c-frame/aframe-physics-system@4.2.2/dist/aframe-physics-system.min.js"></script>
+
+
+  </head>
+  <body>
+    <a-scene>
+      <a-entity static-body environment="preset: forest" lighting="type: ambient; color: #888"></a-entity>
+       <a-plane color="#90ee90" width="10" height="10" rotation="-90 0 0" position="0 -0.02 0"></a-plane>
+      <a-entity id="car" position="0 0 0">
+         <a-entity camera position="0 2 5" look-controls wasd-controls-enabled="false">
+          <a-entity id="car" position="0 0 0">
+            <a-entity camera position="0 2 5" look-controls wasd-controls-enabled="false"></a-entity>
+          </a-entity>
+         </a-entity>
+        <a-box position="0 1 -1.4" color="#076183" height="0.75" width="2" depth="4"></a-box>       
+        <a-box position="0 1.75 -1.15" color="#076183" height="0.8" width="1.6" depth="2"></a-box>
+
+        <a-box position="0 1.75 -1.14" color="white" height="0.6" width="1.4" depth="2.03"></a-box>
+        <a-box position="-0.01 1.75 -1.59" color="white" height="0.6" width="1.63" depth="1"></a-box>
+        <a-box position="-0.01 1.75 -0.55" color="white" height="0.6" width="1.63" depth="0.5"></a-box>
+
+        <a-cylinder height="0.25" radius="0.4" position="1 0.6 0" color="black" rotation="0 0 90"></a-cylinder>
+        <a-cylinder height="0.25" radius="0.4" position="-1 0.6 0" color="black" rotation="0 0 90"></a-cylinder>
+        <a-cylinder height="0.25" radius="0.4" position="1 0.6 -2.4" color="black" rotation="0 0 90"></a-cylinder>
+        <a-cylinder height="0.25" radius="0.4" position="-1 0.6 -2.4" color="black" rotation="0 0 90"></a-cylinder>
+
+        <a-cylinder height="0.1" radius="0.2" position="-0.6 1 -3.4" color="yellow" rotation="0 90 90"></a-cylinder>
+        <a-cylinder height="0.1" radius="0.2" position="0.6 1 -3.4" color="yellow" rotation="0 90 90"></a-cylinder>
+        <a-cylinder height="0.1" radius="0.2" position="-0.6 1 0.6" color="red" rotation="0 90 90"></a-cylinder>
+        <a-cylinder height="0.1" radius="0.2" position="0.6 1 0.6" color="red" rotation="0 90 90"></a-cylinder>
+
+      </a-entity>
+   </a-scene>
+
+    <div class="controls">
+      <h1>Controls</h1>
+      <div class="grid">
+        <div class="blank"></div>
+        <p data-key="w">W</p>
+        <div class="blank"></div>
+        <p data-key="a">A</p>
+        <p data-key="s">S</p>
+        <p data-key="d">D</p>
+      </div>
+    </div>
+   <script src="script.js"></script>
+  </body>
+</html>
+
+
+ 
+
