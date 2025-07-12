@@ -47,7 +47,7 @@ const update = () => {
   }
 };
 
-// 1. Map key codes to the matching <p data-key=""> element
+
 const keyEls = {
   w: document.querySelector('[data-key="w"]'),
   s: document.querySelector('[data-key="s"]'),
@@ -55,7 +55,7 @@ const keyEls = {
   d: document.querySelector('[data-key="d"]')
 };
 
-// 2. Helper to toggle the .click class
+
 function highlight(key, active) {
   const el = keyEls[key];
   if (!el) return;
@@ -63,7 +63,7 @@ function highlight(key, active) {
   else el.classList.remove("click");
 }
 
-// 3. Extend your existing handlers
+
 document.onkeydown = e => {
   const k = e.key.toLowerCase();
   switch (k) {
@@ -72,7 +72,7 @@ document.onkeydown = e => {
     case "a": controls.left  = true;  break;
     case "d": controls.right = true;  break;
   }
-  highlight(k, true);          // ← add glow
+  highlight(k, true);       
 };
 
 document.onkeyup = e => {
@@ -83,7 +83,7 @@ document.onkeyup = e => {
     case "a": controls.left  = false; break;
     case "d": controls.right = false; break;
   }
-  highlight(k, false);         // ← remove glow
+  highlight(k, false);         
 };
 
 setInterval(update, 10);   
